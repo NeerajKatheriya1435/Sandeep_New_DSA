@@ -52,7 +52,6 @@ int main()
 
     // cout<<"The LCM is: "<<findLcm(num1,num2);
 
-
     // cout<<largestNum(num1,num2);
     return 0;
 }
