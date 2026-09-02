@@ -61,13 +61,13 @@ int main()
     // cout<<h3.stdId<<" "<<h3.name<<" "<<h3.salary<<endl;
 
 
-    int num=76;
-    Human h1=Human(101,"Shubham",23000);
-    h1.printData();
-    h1.simple();
+    // int num=76;
+    // Human h1=Human(101,"Shubham",23000);
+    // h1.printData();
+    // h1.simple();
 
-    cout<<num<<endl;
-    cout<<::num<<endl;
+    // cout<<num<<endl;
+    // cout<<::num<<endl;
     // cout<<h1.stdId<<" "<<h1.name<<" "<<h1.salary<<endl;
 
     // Human h2=Human(102,"Riya",89000);
