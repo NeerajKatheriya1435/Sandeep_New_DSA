@@ -27,12 +27,12 @@ class Point{
 };
 
 
-void Calculator::addYNum(Point p1,Point p2){
-    cout<<"The sum of Y Number is: "<<(p1.b+p2.b);
-}
-void Calculator::addXNum(Point p1,Point p2){
-    cout<<"The sum of Y Number is: "<<(p1.a+p2.a);
-}
+// void Calculator::addYNum(Point p1,Point p2){
+//     cout<<"The sum of Y Number is: "<<(p1.b+p2.b);
+// }
+// void Calculator::addXNum(Point p1,Point p2){
+//     cout<<"The sum of Y Number is: "<<(p1.a+p2.a);
+// }
 
 int main()
 {

@@ -14,7 +14,6 @@ class Point{
         void displayNum(){
             cout<<"The Number is: ("<<a<<","<<b<<")"<<endl;
         }
-
         friend void addNum(Point,Point);
 
 };
