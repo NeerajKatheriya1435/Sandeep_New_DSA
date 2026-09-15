@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
+ 
 class wifiandConn{
        virtual void wifi()=0;
        virtual void blutooth()=0;
