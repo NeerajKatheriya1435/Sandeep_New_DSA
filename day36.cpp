@@ -6,6 +6,9 @@ using namespace std;
 
 int main()
 {
+    // fstream data;
+    // data.open("data.txt",ios::in);
+
     // ifstream myText("data.txt");
     // myText.open("data.txt",ios::in);
 
@@ -39,24 +42,24 @@ int main()
     // file << "Hello from fstream!\n";
     // file.close();
 
-    fstream file;
-    file.open("data.txt", ios::in|ios::out);
-    string line,content="";
-    string str2="suman nice to meet you";
-    while (getline(file, line))
-    {
-        if(line==str2){
-            line="My Name is Sandeep\n";
-        }
+    // fstream file;
+    // file.open("data.txt", ios::in|ios::out);
+    // string line,content="";
+    // string str2="suman nice to meet you";
 
-        content+=line;
-    }
+    // while (getline(file, line))
+    // {
+    //     if(line==str2){
+    //         line="My Name is Sandeep\n";
+    //     }
+    //     content+=line;
+    // }
 
-    file.close();
+    // file.close();
     
-    file.open("data.txt", ios::in|ios::out);
-    file<<content;
-    file.close();
+    // file.open("data.txt", ios::in|ios::out);
+    // file<<content;
+    // file.close();
 
     return 0;
 }
