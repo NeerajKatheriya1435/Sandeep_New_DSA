@@ -97,18 +97,17 @@ int main()
     //     cout<<"String is not Palindrome"<<endl;
     // }
 
-    string str1="Sandeep Kumar";
-    int i=0;
-    int count=0;
-    while (str1[i]!='\0')
-    {
-        if(str1[i]=='a'||str1[i]=='e'||str1[i]=='i'||str1[i]=='o'||str1[i]=='u'){
-            count++;
-        }
-        i++;
-    }
-
-    cout<<count<<endl;
+    // string str1="Sandeep Kumar";
+    // int i=0;
+    // int count=0;
+    // while (str1[i]!='\0')
+    // {
+    //     if(str1[i]=='a'||str1[i]=='e'||str1[i]=='i'||str1[i]=='o'||str1[i]=='u'){
+    //         count++;
+    //     }
+    //     i++;
+    // }
+    // cout<<count<<endl;
     
     
     return 0;
