@@ -26,7 +26,9 @@
 -- from employees
 -- group by department;
 
-select city, sum(salary) as "Total salary"
-from employees
-group by city
-having sum(salary)>200000 and sum(salary)<300000;
+-- select city, sum(salary) as "Total salary"
+-- from employees
+-- group by city
+-- having sum(salary)>200000 and sum(salary)<220000;
+
+
