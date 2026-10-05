@@ -49,8 +49,8 @@ int main()
     // e1.setAge(34);
     // cout<<e1.getAge();
 
-    Derived d1;
-    d1.weep();
+    // Derived d1;
+    // d1.weep();
 
     return 0;
 }
