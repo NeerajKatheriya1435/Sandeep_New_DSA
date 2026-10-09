@@ -14,6 +14,7 @@ class Employee{
     void virtual run(){
         cout<<"Human can run"<<endl;
     }
+    
     void sleep(){
         cout<<"Human can sleep"<<endl;
     }
