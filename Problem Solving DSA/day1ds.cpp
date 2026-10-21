@@ -68,10 +68,19 @@ class Array{
                 arr[i]=arr[i+1];
             }
             length--;
-            
+        }
+        int removeAtLast(){
+            length--;
         }
         int size(){
             return length;
+        }
+        void getValueIndex(int index){
+            if(index<0 || index>length){
+                cout<<"Inavalid position"<<endl;
+                return;
+            }
+            cout<<arr[index]<<endl;
         }
 };
 
@@ -82,11 +91,14 @@ int main()
     a1.insertAtLast(56);
     a1.insertAtLast(67);
     a1.insertAtLast(47);
-    a1.insertAtPosition(1,58);
-    a1.insertAtLast(90);
-    a1.insertAtPosition(4,679);
-    a1.remove(4);
-    a1.display();
+    // a1.insertAtPosition(1,58);
+    // a1.insertAtLast(90);
+    // a1.insertAtPosition(4,679);
+    // a1.remove(4);
+    // a1.removeAtLast();
+    // a1.display();
+
+    a1.getValueIndex(1);
 
     // cout<<a1.search(56);
     // cout<<a1.search(5566)<<endl;
