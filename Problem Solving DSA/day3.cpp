@@ -93,6 +93,48 @@ class LinkedList{
             delete temp->next;
             temp->next=nullptr;
         }
+
+        void deleteAtPosition(int pos){
+            if(head==nullptr){
+                cout<<"List is Empty"<<endl;
+                return;
+            }
+            Node* temp=head;
+
+            for (int i = 1; i < pos && temp!=nullptr; i++)
+            {
+                temp=temp->next;
+            }
+            if (temp == nullptr || temp->next == nullptr) {
+                cout << "Invalid position!" << endl;
+                return;
+            }
+            Node *deleteNode=temp->next;
+            temp->next=temp->next->next;
+            delete deleteNode;
+        }
+
+        void searchElem(int value){
+            Node *temp=head;
+            while (temp!=nullptr)
+            {
+                if(temp->data==value){
+                    cout<<"Element Found"<<endl;
+                    break;
+                }
+                temp=temp->next;
+            }
+        }
+        int sizeList(){
+            int count=0;
+            Node *temp=head;
+            while (temp!=nullptr)
+            {
+                count++;
+                temp=temp->next;
+            }
+            return count;
+        }
 };
 
 int main()
@@ -103,6 +145,8 @@ int main()
     l1.insertAtEnd(34);
     l1.insertAtEnd(24);
     l1.insertAtEnd(54);
+    l1.insertAtEnd(78);
+    l1.insertAtEnd(23);
     // l1.insertAtbegining(55);
     // l1.insertAtPosition(2,788);
     // l1.insertAtPosition(1,453);
@@ -110,13 +154,10 @@ int main()
 
     // l1.deleteAtBegining();
     // l1.deleteAtBegining();
-    l1.deleteAtEnd();
-
-    l1.displayData();
-
-
-
-
-
+    // l1.deleteAtEnd();
+    // l1.deleteAtPosition(5);
+    // l1.displayData();
+    // l1.searchElem(23);
+    cout<<l1.sizeList();
     return 0;
 }
