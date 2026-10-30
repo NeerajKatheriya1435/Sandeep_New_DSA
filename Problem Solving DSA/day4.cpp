@@ -121,8 +121,9 @@ class DoublyLinkedList{
                 deleteAtbegining();
                 return;
             }
+
             Node* temp = head;
-            for (int i = 1; i < pos && temp != nullptr; i++)
+            for (int i = 1; i <= pos && temp != nullptr; i++)
                 temp = temp->next;
 
             if(temp == nullptr) {
@@ -137,9 +138,38 @@ class DoublyLinkedList{
 
             delete temp;
         }
-        void listSize(){}
-        void searchElement(){}
-        void getIndex(){}
+        int listSize(){
+            int count=0;
+            Node* temp=head;
+            if(head==nullptr){
+                cout<<"List is Empty"<<endl;
+                return -1;
+            }
+
+            while (temp!=nullptr)
+            {
+                count++;
+                temp=temp->next;
+            }
+            return count;
+        }
+        int searchElement(int value){
+            Node* temp=head;
+            int count=0;
+            if(head==nullptr){
+                cout<<"List is Empty"<<endl;
+                return -1;
+            }
+            while (temp!=nullptr)
+            {
+                if(temp->data==value){
+                    return count;
+                }
+                count++;
+                temp=temp->next;
+            }
+            return -2;
+        }
 
         void displayData(){
             Node* temp=head;
@@ -166,14 +196,17 @@ int main()
     d1.insertAtEnd(23);
     d1.insertAtEnd(89);
     d1.insertAtEnd(74);
-    d1.deleteAtPosition(3);
+
+    cout<<d1.searchElement(78)<<endl;
+    // d1.deleteAtPosition(1);
     // d1.deleteAtEnd();
     // d1.deleteAtEnd();
     // d1.insertAtPosition(2,567);
     // d1.insertAtPosition(4,222);
     // d1.deleteAtbegining();
     // d1.deleteAtbegining();
-    d1.displayData();
+    // d1.displayData();
+    // cout<<d1.listSize()<<endl;
 
     return 0;
 }
