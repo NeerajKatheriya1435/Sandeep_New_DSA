@@ -69,10 +69,75 @@ class DoublyLinkedList{
             temp->next = newNode;
         }
 
-        void deleteAtPosition(){}
+        void deleteAtbegining(){
+            if (head == nullptr) {
+                cout << "List is empty!" << endl;
+                return;
+            }
+
+            Node* temp = head;
+            head = head->next;
+            if (head != nullptr)
+                head->prev = nullptr;
+            delete temp;
+        }
+        // void deleteAtbegining(){
+        //     if(head==nullptr){
+        //         cout<<"List is Empty"<<endl;
+        //         return;
+        //     }
+        //     if(head->next==nullptr){
+        //         delete head;
+        //         return;
+        //     }
+        //     Node *temp=head;
+        //     head=head->next;
+        //     head->prev=nullptr;
+        //     delete temp;
+        // }
+
+        
+        void deleteAtEnd(){
+            if (head == nullptr) {
+                cout << "List is empty!" << endl;
+                return;
+            }
+
+            if (head->next == nullptr) {
+                delete head;
+                head = nullptr;
+                return;
+            }
+
+            Node* temp = head;
+            while (temp->next != nullptr)
+                temp = temp->next;
+            
+            temp->prev->next=nullptr;
+            delete temp;
+        }
+        void deleteAtPosition(int pos){
+            if (pos == 0) {
+                deleteAtbegining();
+                return;
+            }
+            Node* temp = head;
+            for (int i = 1; i < pos && temp != nullptr; i++)
+                temp = temp->next;
+
+            if(temp == nullptr) {
+                cout << "Invalid position!" << endl;
+                return;
+            }
+            if (temp->next != nullptr)
+                temp->next->prev = temp->prev;
+
+            if (temp->prev != nullptr)
+                temp->prev->next = temp->next;
+
+            delete temp;
+        }
         void listSize(){}
-        void deleteAtbegining(){}
-        void deleteAtEnd(){}
         void searchElement(){}
         void getIndex(){}
 
@@ -101,8 +166,13 @@ int main()
     d1.insertAtEnd(23);
     d1.insertAtEnd(89);
     d1.insertAtEnd(74);
-    d1.insertAtPosition(2,567);
-    d1.insertAtPosition(4,222);
+    d1.deleteAtPosition(3);
+    // d1.deleteAtEnd();
+    // d1.deleteAtEnd();
+    // d1.insertAtPosition(2,567);
+    // d1.insertAtPosition(4,222);
+    // d1.deleteAtbegining();
+    // d1.deleteAtbegining();
     d1.displayData();
 
     return 0;
